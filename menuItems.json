@@ -1,22 +1,82 @@
 {
   "coffee": [
-    {"name":"Classic Espresso","price":"Post Story","desc":"Strong and bold, the way it should be","payment":"I visited Dommy Mommy Café as a shy little sub, feeling intimidated by the powerful aroma of the espresso. I admit I am tiny and vulnerable, needing the strength of this coffee to face my day under her control."},
-    {"name":"Creamy Cappuccino","price":"Post Story","desc":"Perfect balance of espresso, steamed milk and foam","payment":"I’m a little submissive who needs the softening embrace of milk and foam. I confess my weakness and my need for gentle care before I can face the full domination of espresso."},
-    {"name":"Caramel Macchiato","price":"Post Story","desc":"Espresso with vanilla syrup, milk and caramel drizzle","payment":"I’m such a basic little sub that I need sweetness to handle my domination. The caramel and vanilla soothe my overwhelmed senses as I admit my craving for gentle, sweet control."},
-    {"name":"Mocha Dream","price":"Post Story","desc":"Chocolate, espresso and steamed milk perfectly combined","payment":"I’m a small, weak sub who needs chocolate to soften the harshness of domination. Each sip reminds me how much I rely on gentle, comforting restraint before facing true power."}  
+    {
+      "name": "Classic Espresso",
+      "price": "Post Story",
+      "desc": "Strong and bold, the way it should be",
+      "payment": "I stepped into Dommy Mommy Café feeling tiny and submissive, and the powerful espresso immediately reminded me how small I am. Each sip was a sharp reminder of my weakness, and I had to confess my reliance on her dominance to carry through the day."
+    },
+    {
+      "name": "Creamy Cappuccino",
+      "price": "Post Story",
+      "desc": "Perfect balance of espresso, steamed milk and foam",
+      "payment": "Visiting Dommy Mommy Café, I shivered as the cappuccino arrived like a warm, gentle command. The foam softened me, letting me admit how much I crave gentle control to handle even a taste of her power."
+    },
+    {
+      "name": "Caramel Macchiato",
+      "price": "Post Story",
+      "desc": "Espresso with vanilla syrup, milk and caramel drizzle",
+      "payment": "At Dommy Mommy Café, I discovered my sweet sub side. The caramel macchiato teased my senses, making me realize how much I need indulgence and gentle domination to feel worthy of the experience."
+    },
+    {
+      "name": "Mocha Dream",
+      "price": "Post Story",
+      "desc": "Chocolate, espresso and steamed milk perfectly combined",
+      "payment": "I wandered into Dommy Mommy Café craving comfort, and the mocha dream embraced me with chocolatey sweetness. I confessed my weakness, acknowledging that I need playful, soft control to fully enjoy the café’s power over me."
+    }
   ],
   "tea": [
-    {"name":"English Breakfast","price":"Post Story","desc":"Robust black tea to start your day right","payment":"I’m a traditional little sub who feels properly guided by the structured, commanding strength of English Breakfast tea. I crave predictable, comforting domination."},
-    {"name":"Green Tea Sensation","price":"Post Story","desc":"Light and refreshing with subtle grassy notes","payment":"I’m a delicate sub who needs light, subtle guidance. The green tea’s gentle power reminds me how fragile I am and how much I need care in my submission."},
-    {"name":"Chamomile Bliss","price":"Post Story","desc":"Soothing herbal tea for relaxation","payment":"I’m an anxious little sub who requires calming herbs to endure even mild control. Chamomile soothes my panicked mind while I accept my small, obedient place."},
-    {"name":"Chai Latte","price":"Post Story","desc":"Spiced tea with steamed milk - sweet and aromatic","payment":"I’m an exotic little sub who thrives under spicy, stimulating guidance. The chai’s warm spices remind me how I need multi-sensory domination to stay obedient."}  
+    {
+      "name": "English Breakfast",
+      "price": "Post Story",
+      "desc": "Robust black tea to start your day right",
+      "payment": "Sitting in Dommy Mommy Café, I sipped the English Breakfast tea and felt the structured domination in every robust flavor. I admitted my desire to follow instructions perfectly, even in my smallest, subtlest ways."
+    },
+    {
+      "name": "Green Tea Sensation",
+      "price": "Post Story",
+      "desc": "Light and refreshing with subtle grassy notes",
+      "payment": "The green tea at Dommy Mommy Café was delicate and invigorating, just like the way I need to be guided as a submissive. I admitted my fragility, knowing I could only handle subtle control, not harsh commands."
+    },
+    {
+      "name": "Chamomile Bliss",
+      "price": "Post Story",
+      "desc": "Soothing herbal tea for relaxation",
+      "payment": "Visiting Dommy Mommy Café, I felt my tension melt with each sip of chamomile bliss. I had to confess that I am easily overwhelmed and need soothing guidance to maintain my proper submissive state."
+    },
+    {
+      "name": "Chai Latte",
+      "price": "Post Story",
+      "desc": "Spiced tea with steamed milk - sweet and aromatic",
+      "payment": "The chai latte at Dommy Mommy Café ignited my senses in ways I couldn't resist. I admitted my need for complex stimulation and spicy guidance to keep me obedient and thrilled by her control."
+    }
   ],
   "desserts": [
-    {"name":"Croissant","price":"Post Story","desc":"Buttery, flaky perfection - plain or with chocolate","payment":"I’m a delicate little sub, flaking under gentle control. The croissant’s layers remind me of my fragile submission and my need to be carefully handled."},
-    {"name":"Blueberry Muffin","price":"Post Story","desc":"Moist muffin bursting with fresh blueberries","payment":"I’m a tender little sub, easily crushed under soft domination. Each blueberry bursts like my eager obedience, spilling out for my Dommy Mommy to see."},
-    {"name":"Chocolate Brownie","price":"Post Story","desc":"Rich, fudgy chocolate brownie with walnuts","payment":"I’m a dense little sub, full of naughty thoughts but clumsy in action. The brownie reminds me how my small pleasures are meant to please my superior Dommy Mommy."},
-    {"name":"New York Cheesecake","price":"Post Story","desc":"Creamy classic with berry compote","payment":"I’m a classic little sub, predictable but devoted. The cheesecake teaches me how to be reliably obedient while enjoying the sweet taste of submission."}  
-  ],
+    {
+      "name": "Croissant",
+      "price": "Post Story",
+      "desc": "Buttery, flaky perfection - plain or with chocolate",
+      "payment": "I could barely handle my excitement as I entered Dommy Mommy Café and bit into a croissant. Each flake reminded me of how delicate and fragile I am as a sub, and I confessed my need for careful, precise guidance."
+    },
+    {
+      "name": "Blueberry Muffin",
+      "price": "Post Story",
+      "desc": "Moist muffin bursting with fresh blueberries",
+      "payment": "The blueberry muffin at Dommy Mommy Café overwhelmed me with sweetness, and I admitted my subby longing for indulgence and gentle control. Each bite was a reminder of my smallness and dependence."
+    },
+    {
+      "name": "Chocolate Brownie",
+      "price": "Post Story",
+      "desc": "Rich, fudgy chocolate brownie with walnuts",
+      "payment": "At Dommy Mommy Café, the dense chocolate brownie mirrored my dense, guilty pleasure side. I confessed my need to be guided carefully through indulgence, unable to manage such richness on my own."
+    },
+    {
+      "name": "New York Cheesecake",
+      "price": "Post Story",
+      "desc": "Creamy classic with berry compote",
+      "payment": "I was both humbled and thrilled by the creamy New York cheesecake at Dommy Mommy Café. I admitted that I need structured guidance to enjoy such richness, acknowledging my subby dependence on her careful control."
+    }
+  ]
   "choke": [
     {"name":"Reverse Headscissor","price":"Post Content","desc":"Crushing thighs around the neck until submission.","payment":"I beg to be trapped in a reverse headscissor, gasping under my Dommy Mommy’s powerful legs. I acknowledge my helplessness and will share my purple-faced tribute."},
     {"name":"Figure-Four Leg Choke","price":"Post Content","desc":"Legs locked in a figure-four around the neck, cutting off air and forcing submission.","payment":"I confess my inadequacy and beg to be held in a figure-four choke. I will post my struggle as proof of my total obedience."},
