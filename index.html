@@ -72,7 +72,7 @@ body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,
       <div class="menu-items" id="dessertItems"></div>
     </div>
     <div class="secret-section">
-      <button class="secret-btn" onclick="toggleModal(true)"><span><i class="fas fa-lock"></i></span><span id="btnText">Access Secret Menu</span></button>
+      <button class="secret-btn" onclick="handleSecretToggle()"><span><i class="fas fa-lock"></i></span><span id="btnText">Access Secret Menu</span></button>
       <p class="warning">For members only - password required</p>
       <div class="secret-menu" id="secretMenu">
         <h2 class="secret-title"><span><i class="fas fa-unlock"></i></span>Exclusive Secret Menu<span><i class="fas fa-unlock"></i></span></h2>
@@ -116,12 +116,18 @@ body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,
 </div>
 
 <script>
-// Load menu items from external JSON files
+let secretVisible = false;
+let secretDataGlobal = null; // store secret data globally
+
 async function loadMenu() {
+  // Main menu
   const resMain = await fetch('menuItems.json');
   const mainData = await resMain.json();
 
+  // Secret menu
   const resSecret = await fetch('secret_menu.json');
+  const secretData = await resSecret.json();
+  secretDataGlobal = secretData; // save globally
 
   function fillItems(container, items, isSecret = false){
     const c = document.getElementById(container);
@@ -149,7 +155,7 @@ async function loadMenu() {
   fillItems('teaItems', mainData.tea);
   fillItems('dessertItems', mainData.desserts);
 
-  // Secret menu
+  // Secret menu (fill now but hidden until password)
   fillItems('chokeItems', secretData.choke, true);
   fillItems('juiceItems', secretData.juice, true);
   fillItems('physicalItems', secretData.physical, true);
@@ -185,6 +191,7 @@ function toggleModal(show){
 function checkPassword(){
   if(input.value==='mommyy'){
     toggleModal(false);
+    secretVisible = true;
     menu.style.display='block';
     document.getElementById('btnText').textContent='Hide Secret Menu';
   } else {
@@ -193,6 +200,18 @@ function checkPassword(){
   }
 }
 
+// Handle the toggle button for secret menu
+function handleSecretToggle(){
+  if(!secretVisible){
+    toggleModal(true); // show password modal
+  } else {
+    secretVisible = false;
+    menu.style.display = 'none';
+    document.getElementById('btnText').textContent='Access Secret Menu';
+  }
+}
+
+// Close modals when clicking outside
 modal.addEventListener('click', e => { if(e.target===modal) toggleModal(false) });
 document.getElementById('paymentModal').addEventListener('click', e => { 
   if(e.target === document.getElementById('paymentModal')) closePaymentModal() 
