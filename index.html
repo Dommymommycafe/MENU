@@ -121,8 +121,7 @@ async function loadMenu() {
   const resMain = await fetch('menuItems.json');
   const mainData = await resMain.json();
 
-  const resSecret = await fetch('secretMenu.json');
-  const secretData = await resSecret.json();
+  const resSecret = await fetch('secret_menu.json');
 
   function fillItems(container, items, isSecret = false){
     const c = document.getElementById(container);
