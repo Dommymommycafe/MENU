@@ -13,7 +13,7 @@
 body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--accent3);display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
 .menu-container{max-width:1100px;width:100%}
 .menu-header{text-align:center;margin-bottom:30px}
-.menu-title{font-size:3.5rem;color:var(--accent1);margin-bottom:10px;text-shadow:3px3px 0 var(--accent2);letter-spacing:2px;font-weight:800}
+.menu-title{font-size:3.5rem;color:var(--accent1);margin-bottom:10px;text-shadow:3px 3px 0 var(--accent2);letter-spacing:2px;font-weight:800}
 .menu-subtitle{font-style:italic;color:#d9b0e6;margin-bottom:20px;font-size:1.2rem}
 .menu{background:rgba(44,26,59,.9);border-radius:25px;padding:40px;box-shadow:0 15px 40px rgba(0,0,0,.4);backdrop-filter:blur(5px);border:2px solid var(--accent2);position:relative;overflow:hidden}
 .menu::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(90deg,#ff73b9,#7e3f8f,#493c7d);border-radius:25px 25px 0 0}
@@ -76,16 +76,16 @@ body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,
       <p class="warning">For members only - password required</p>
       <div class="secret-menu" id="secretMenu">
         <h2 class="secret-title"><span><i class="fas fa-unlock"></i></span>Exclusive Secret Menu<span><i class="fas fa-unlock"></i></span></h2>
-        
+
         <h3 class="secret-category-title">🔒 Choke / Breathplay</h3>
         <div class="secret-grid" id="chokeItems"></div>
-        
+
         <h3 class="secret-category-title">💦 Juices / Consumption</h3>
         <div class="secret-grid" id="juiceItems"></div>
-        
+
         <h3 class="secret-category-title">💪 Physical / Pain & Restraint</h3>
         <div class="secret-grid" id="physicalItems"></div>
-        
+
         <h3 class="secret-category-title">👣 Humiliation / Roleplay</h3>
         <div class="secret-grid" id="humiliationItems"></div>
       </div>
@@ -116,10 +116,13 @@ body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,
 </div>
 
 <script>
-// Load menu items from external JSON file
+// Load menu items from external JSON files
 async function loadMenu() {
-  const res = await fetch('menuItems.json');
-  const data = await res.json();
+  const resMain = await fetch('menuItems.json');
+  const mainData = await resMain.json();
+
+  const resSecret = await fetch('secretMenu.json');
+  const secretData = await resSecret.json();
 
   function fillItems(container, items, isSecret = false){
     const c = document.getElementById(container);
@@ -128,7 +131,7 @@ async function loadMenu() {
       const itemElement = document.createElement('div');
       itemElement.className = isSecret ? 'secret-item' : 'menu-item';
       itemElement.innerHTML = `
-        <div class="item-name">${i.name}<span class="item-price">${i.price}</span></div>
+        <div class="item-name">${i.name}</div>
         <p class="${isSecret ? 'secret-item-desc' : 'item-desc'}">${i.desc}</p>
         <div class="${isSecret ? 'post-indicator' : 'story-indicator'}">
           <i class="fas ${isSecret ? 'fa-comment' : 'fa-book'}"></i> 
@@ -142,13 +145,16 @@ async function loadMenu() {
     });
   }
 
-  fillItems('coffeeItems', data.coffee);
-  fillItems('teaItems', data.tea);
-  fillItems('dessertItems', data.desserts);
-  fillItems('chokeItems', data.choke, true);
-  fillItems('juiceItems', data.juice, true);
-  fillItems('physicalItems', data.physical, true);
-  fillItems('humiliationItems', data.humiliation, true);
+  // Normal menu
+  fillItems('coffeeItems', mainData.coffee);
+  fillItems('teaItems', mainData.tea);
+  fillItems('dessertItems', mainData.desserts);
+
+  // Secret menu
+  fillItems('chokeItems', secretData.choke, true);
+  fillItems('juiceItems', secretData.juice, true);
+  fillItems('physicalItems', secretData.physical, true);
+  fillItems('humiliationItems', secretData.humiliation, true);
 }
 
 function openPaymentModal(itemName, paymentText, isSecret = false) {
