@@ -1,122 +1,43 @@
 {
   "coffee": [
-    {
-      "n": "Classic Espresso",
-      "d": "I visited Dommy Mommy Café as a shy little sub, and the intensity of the espresso left me trembling. I couldn’t help but admire how every shot was served with such precise control, making me feel delightfully obedient."
-    },
-    {
-      "n": "Creamy Cappuccino",
-      "d": "The cappuccino wrapped me in a soft, warm embrace. I felt small and devoted as the frothy milk softened the bold espresso, reminding me that sometimes submission means enjoying the gentle touch before facing stronger pleasures."
-    },
-    {
-      "n": "Caramel Macchiato",
-      "d": "With each sip of the caramel macchiato, I felt a sweet, teasing dominance over my senses. I was aware of my own weakness, quietly submitting to the luxurious flavors, craving every little indulgence served with care."
-    },
-    {
-      "n": "Mocha Dream",
-      "d": "I felt so small before the mocha dream, the chocolate and espresso combining in a way that left me completely under the café's spell. Every sip reminded me that surrendering to delight is part of my subby journey."
-    }
+    {"name":"Classic Espresso","price":"Post Story","desc":"Strong and bold, the way it should be","payment":"I visited Dommy Mommy Café as a shy little sub, feeling intimidated by the powerful aroma of the espresso. I admit I am tiny and vulnerable, needing the strength of this coffee to face my day under her control."},
+    {"name":"Creamy Cappuccino","price":"Post Story","desc":"Perfect balance of espresso, steamed milk and foam","payment":"I’m a little submissive who needs the softening embrace of milk and foam. I confess my weakness and my need for gentle care before I can face the full domination of espresso."},
+    {"name":"Caramel Macchiato","price":"Post Story","desc":"Espresso with vanilla syrup, milk and caramel drizzle","payment":"I’m such a basic little sub that I need sweetness to handle my domination. The caramel and vanilla soothe my overwhelmed senses as I admit my craving for gentle, sweet control."},
+    {"name":"Mocha Dream","price":"Post Story","desc":"Chocolate, espresso and steamed milk perfectly combined","payment":"I’m a small, weak sub who needs chocolate to soften the harshness of domination. Each sip reminds me how much I rely on gentle, comforting restraint before facing true power."}  
   ],
   "tea": [
-    {
-      "n": "English Breakfast",
-      "d": "The strong, commanding aroma of the English Breakfast tea had me feeling like a devoted little sub, eager to follow every note and nuance as if I were learning to obey the rules of flavor."
-    },
-    {
-      "n": "Green Tea Sensation",
-      "d": "Light and refreshing, the green tea sensation made me feel delicate and attentive, like a sub carefully following instructions, appreciating the subtleties in every steeped leaf."
-    },
-    {
-      "n": "Chamomile Bliss",
-      "d": "Chamomile Bliss wrapped me in gentle control, calming my fluttering nerves. I felt comforted and small, surrendering to the soothing experience like a sub being pampered under watchful eyes."
-    },
-    {
-      "n": "Chai Latte",
-      "d": "The warm spices of the chai latte teased me into obedience, each sip a reminder of the playful dominance the café holds over my senses. I was happily under its control, a little sub enjoying every flavorful command."
-    }
+    {"name":"English Breakfast","price":"Post Story","desc":"Robust black tea to start your day right","payment":"I’m a traditional little sub who feels properly guided by the structured, commanding strength of English Breakfast tea. I crave predictable, comforting domination."},
+    {"name":"Green Tea Sensation","price":"Post Story","desc":"Light and refreshing with subtle grassy notes","payment":"I’m a delicate sub who needs light, subtle guidance. The green tea’s gentle power reminds me how fragile I am and how much I need care in my submission."},
+    {"name":"Chamomile Bliss","price":"Post Story","desc":"Soothing herbal tea for relaxation","payment":"I’m an anxious little sub who requires calming herbs to endure even mild control. Chamomile soothes my panicked mind while I accept my small, obedient place."},
+    {"name":"Chai Latte","price":"Post Story","desc":"Spiced tea with steamed milk - sweet and aromatic","payment":"I’m an exotic little sub who thrives under spicy, stimulating guidance. The chai’s warm spices remind me how I need multi-sensory domination to stay obedient."}  
   ],
   "desserts": [
-    {
-      "n": "Croissant",
-      "d": "Flaky and buttery, the croissant made me realize how sweet surrender could be. I felt so small before its perfection, happily yielding to the gentle authority of the café’s hands."
-    },
-    {
-      "n": "Blueberry Muffin",
-      "d": "The blueberry muffin was a treat that made me feel obedient and eager. Each bite reminded me that submission can be deliciously rewarding when served with care and attention."
-    },
-    {
-      "n": "Chocolate Brownie",
-      "d": "Rich and decadent, the chocolate brownie was a test of my devotion. I surrendered fully to the indulgence, aware of my subby nature and enjoying the controlled pleasure it offered."
-    },
-    {
-      "n": "New York Cheesecake",
-      "d": "The creamy cheesecake had me feeling small and devoted, each forkful a gentle reminder that being a submissive sometimes means enjoying every detail, no matter how overwhelming it seems."
-    }
+    {"name":"Croissant","price":"Post Story","desc":"Buttery, flaky perfection - plain or with chocolate","payment":"I’m a delicate little sub, flaking under gentle control. The croissant’s layers remind me of my fragile submission and my need to be carefully handled."},
+    {"name":"Blueberry Muffin","price":"Post Story","desc":"Moist muffin bursting with fresh blueberries","payment":"I’m a tender little sub, easily crushed under soft domination. Each blueberry bursts like my eager obedience, spilling out for my Dommy Mommy to see."},
+    {"name":"Chocolate Brownie","price":"Post Story","desc":"Rich, fudgy chocolate brownie with walnuts","payment":"I’m a dense little sub, full of naughty thoughts but clumsy in action. The brownie reminds me how my small pleasures are meant to please my superior Dommy Mommy."},
+    {"name":"New York Cheesecake","price":"Post Story","desc":"Creamy classic with berry compote","payment":"I’m a classic little sub, predictable but devoted. The cheesecake teaches me how to be reliably obedient while enjoying the sweet taste of submission."}  
   ],
-  "secret": [
-    {
-      "n": "Thigh Scissor Supreme",
-      "d": "Experience the ultimate headscissor domination, leaving me trembling in delightful submission."
-    },
-    {
-      "n": "Bosom Control",
-      "d": "Complete boob smothering experience, perfectly crafted for a sub eager to submit."
-    },
-    {
-      "n": "Hand Gag Session",
-      "d": "A firm hand gag that reminds me of my small and obedient place."
-    },
-    {
-      "n": "Kiss & Gag",
-      "d": "Breathplay combined with teasing kisses for a fully submissive experience."
-    },
-    {
-      "n": "Sole Submission",
-      "d": "Feet worship designed to make me obedient and attentive to every command."
-    },
-    {
-      "n": "Feet Gagging",
-      "d": "Submission through foot-based control, leaving me small and compliant."
-    },
-    {
-      "n": "Queen's Throne",
-      "d": "Full facesitting experience with optional control, making me fully subby."
-    },
-    {
-      "n": "Anal Dominance (Strap-On)",
-      "d": "A pegging session that leaves me utterly under control, embracing my submissive side."
-    },
-    {
-      "n": "Total Bondage",
-      "d": "Complete restraint experience, teaching me to accept my helplessness with obedience."
-    },
-    {
-      "n": "Human Furniture",
-      "d": "Becoming functional furniture for a Domme’s relaxation, fully submitting to every command."
-    },
-    {
-      "n": "Sensory Deprivation",
-      "d": "Blindfolds, gags, and restraint combine to heighten my awareness of being a sub."
-    },
-    {
-      "n": "Financial Domination",
-      "d": "Monetary submission through tribute and gift giving, embracing my obedient nature."
-    },
-    {
-      "n": "Figure 4 Headscissor",
-      "d": "Experience the powerful figure 4 scissor, making me submit completely."
-    },
-    {
-      "n": "Pussy Grinding",
-      "d": "Front-facing grinding that makes me ache with subby anticipation."
-    },
-    {
-      "n": "Facesitting",
-      "d": "Full facesitting experience emphasizing my small, obedient role."
-    },
-    {
-      "n": "Blood Ritual",
-      "d": "Submission intensified with the unique ritual, leaving me completely devoted."
-    }
+  "choke": [
+    {"name":"Reverse Headscissor","price":"Post Content","desc":"Crushing thighs around the neck until submission.","payment":"I beg to be trapped in a reverse headscissor, gasping under my Dommy Mommy’s powerful legs. I acknowledge my helplessness and will share my purple-faced tribute."},
+    {"name":"Figure-Four Leg Choke","price":"Post Content","desc":"Legs locked in a figure-four around the neck, cutting off air and forcing submission.","payment":"I confess my inadequacy and beg to be held in a figure-four choke. I will post my struggle as proof of my total obedience."},
+    {"name":"Rear Naked Choke","price":"Post Content","desc":"Blood choke from behind, bringing victim close to blackout.","payment":"I desire to be rendered unconscious from behind, completely vulnerable to my Dommy Mommy. I will share my limp, obedient form."},
+    {"name":"Air Headscissor","price":"Post Content","desc":"Legs wrapped around the head/neck from the front while suspended in the air, crushing and controlling airflow completely.","payment":"I beg to be lifted and suspended, entirely dependent on my Dommy Mommy’s strength. I will document my dangling, helpless form."},
+    {"name":"Bosom Smother","price":"Post Content","desc":"Suffocation through breast smothering.","payment":"I need to be smothered between my Dommy Mommy’s chest, my face only a seat for her pleasure. I will share my flushed, breathless face afterward."}  
+  ],
+  "juice": [
+    {"name":"Cum Consumption Ritual","price":"Post Content","desc":"Forced cum drinking with humiliation.","payment":"I beg to serve as a living vessel for my Dommy Mommy’s release. I will share videos of my grateful obedience."},
+    {"name":"Golden Shower","price":"Post Content","desc":"Urolagnia ritual, humiliating ownership.","payment":"I confess my desire to be baptized in my Dommy Mommy’s golden shower. I will post evidence of my drenched submission."},
+    {"name":"Face Farting","price":"Post Content","desc":"Total degradation with breath control.","payment":"I beg to endure my Dommy Mommy’s gaseous dominance. I will share audio of my grateful thanks after each session."},
+    {"name":"Blood Ritual","price":"Post Content","desc":"Submission intensified with the unique ritual.","payment":"I beg to partake in a ritual involving blood, reinforcing my small, devoted role. I will document my participation with humility and gratitude."}  
+  ],
+  "physical": [
+    {"name":"Pegging Domination","price":"Post Content","desc":"Strap-on mastery with anal control.","payment":"I beg for my Dommy Mommy to claim me with her strap-on. I will share audio of my moans as proof of obedience."},
+    {"name":"Total Bondage","price":"Post Content","desc":"Full restraints and immobilization.","payment":"I need to be completely immobilized, displayed as a bound trophy. I will post photos of my restrained form."},
+    {"name":"Impact Play","price":"Post Content","desc":"Whips, paddles, and corporal punishment.","payment":"I confess my flesh deserves marking. I will document each welt as proof of my inferior position."}  
+  ],
+  "humiliation": [
+    {"name":"Foot Worship","price":"Post Content","desc":"Sole licking, trampling, and verbal degradation.","payment":"I confess my tongue belongs pressed against my Dommy Mommy’s soles. I will share videos of my thorough worship."},
+    {"name":"Facesitting Throne","price":"Post Content","desc":"Ownership through smothering facesit.","payment":"I need my Dommy Mommy to use my face as her throne. I will share photos of my face buried beneath her greatness."},
+    {"name":"Human Furniture","price":"Post Content","desc":"Forced to act as functional furniture.","payment":"I beg to be living furniture for my Dommy Mommy’s comfort. I will share time-lapse videos of my stillness as she uses me."}  
   ]
 }
