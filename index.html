@@ -15,7 +15,7 @@ body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,
 .menu-header{text-align:center;margin-bottom:30px}
 .menu-title{font-size:3.5rem;color:var(--accent1);margin-bottom:10px;text-shadow:3px 3px 0 var(--accent2);letter-spacing:2px;font-weight:800}
 .menu-subtitle{font-style:italic;color:#d9b0e6;margin-bottom:20px;font-size:1.2rem}
-.menu{background:rgba(44,26,59,.9);border-radius:25px;padding:40px;box-shadow:0 15px 40px rgba(0,0,0,.4);backdrop-filter:blur(5px);border:2px solid var(--accent2);position:relative;overflow:hidden}
+.menu{background:rgba(44,26,59,.9);border-radius:25px;padding:40px;box-shadow:0 15px 40px rgba(0,0,0,.4);backdrop-filter:blur(5px);border:2px solid var(--accent2);position:relative;overflow:visible}
 .menu::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(90deg,#ff73b9,#7e3f8f,#493c7d);border-radius:25px 25px 0 0}
 .menu-category{margin-bottom:35px}
 .category-title{display:flex;align-items:center;margin-bottom:20px}
@@ -116,60 +116,75 @@ body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,
 </div>
 
 <script>
-// Load menu items from GitHub Pages JSON
+const mainJSONURL = 'https://dommymommycafe.github.io/MENU/menuItems.json';
+const secretJSONURL = 'https://dommymommycafe.github.io/MENU/secret_menu.json';
+
+// Fallback JSON in case fetch fails
+const fallbackMainData = {
+  coffee:[{name:"Cappuccino",desc:"Rich and creamy",payment:"Cappuccino payment text"}],
+  tea:[{name:"Green Tea",desc:"Fresh and soothing",payment:"Green Tea payment text"}],
+  desserts:[{name:"Chocolate Cake",desc:"Decadent treat",payment:"Chocolate Cake payment text"}]
+};
+
+const fallbackSecretData = {
+  choke:[{name:"Secret Choke 1",desc:"...Description...",payment:"Secret Choke Payment"}],
+  juice:[{name:"Secret Juice 1",desc:"...Description...",payment:"Secret Juice Payment"}],
+  physical:[{name:"Secret Physical 1",desc:"...Description...",payment:"Secret Physical Payment"}],
+  humiliation:[{name:"Secret Humiliation 1",desc:"...Description...",payment:"Secret Humiliation Payment"}]
+};
+
 async function loadMenu() {
-  const resMain = await fetch('https://dommymommycafe.github.io/MENU/menuItems.json');
-  const mainData = await resMain.json();
+  let mainData = fallbackMainData;
+  let secretData = fallbackSecretData;
 
-  const resSecret = await fetch('https://dommymommycafe.github.io/MENU/secretMenu.json');
-  const secretData = await resSecret.json();
+  try {
+    const resMain = await fetch(mainJSONURL);
+    if(resMain.ok) mainData = await resMain.json();
+  } catch(e){ console.warn("Main JSON failed, using fallback") }
 
-  function fillItems(container, items, isSecret = false){
+  try {
+    const resSecret = await fetch(secretJSONURL);
+    if(resSecret.ok) secretData = await resSecret.json();
+  } catch(e){ console.warn("Secret JSON failed, using fallback") }
+
+  function fillItems(container, items, isSecret=false){
     const c = document.getElementById(container);
     c.innerHTML = '';
-    items.forEach(i => {
-      const itemElement = document.createElement('div');
-      itemElement.className = isSecret ? 'secret-item' : 'menu-item';
-      itemElement.innerHTML = `
+    items.forEach(i=>{
+      const item = document.createElement('div');
+      item.className = isSecret ? 'secret-item' : 'menu-item';
+      item.innerHTML = `
         <div class="item-name">${i.name}</div>
-        <p class="${isSecret ? 'secret-item-desc' : 'item-desc'}">${i.desc}</p>
-        <div class="${isSecret ? 'post-indicator' : 'story-indicator'}">
-          <i class="fas ${isSecret ? 'fa-comment' : 'fa-book'}"></i> 
-          Click to view payment requirements
-        </div>
+        <p class="${isSecret?'secret-item-desc':'item-desc'}">${i.desc}</p>
+        <div class="${isSecret?'post-indicator':'story-indicator'}"><i class="fas ${isSecret?'fa-comment':'fa-book'}"></i> Click to view payment requirements</div>
       `;
-      itemElement.addEventListener('click', () => {
-        openPaymentModal(i.name, i.payment, isSecret);
-      });
-      c.appendChild(itemElement);
+      item.addEventListener('click',()=>openPaymentModal(i.name,i.payment,isSecret));
+      c.appendChild(item);
     });
   }
 
-  // Normal menu
-  fillItems('coffeeItems', mainData.coffee);
-  fillItems('teaItems', mainData.tea);
-  fillItems('dessertItems', mainData.desserts);
+  // Fill normal menu
+  fillItems('coffeeItems',mainData.coffee);
+  fillItems('teaItems',mainData.tea);
+  fillItems('dessertItems',mainData.desserts);
 
-  // Secret menu
-  fillItems('chokeItems', secretData.choke, true);
-  fillItems('juiceItems', secretData.juice, true);
-  fillItems('physicalItems', secretData.physical, true);
-  fillItems('humiliationItems', secretData.humiliation, true);
+  // Fill secret menu
+  fillItems('chokeItems',secretData.choke,true);
+  fillItems('juiceItems',secretData.juice,true);
+  fillItems('physicalItems',secretData.physical,true);
+  fillItems('humiliationItems',secretData.humiliation,true);
 }
 
-function openPaymentModal(itemName, paymentText, isSecret = false) {
+// Payment modal functions
+function openPaymentModal(itemName,paymentText,isSecret=false){
   document.getElementById('paymentItemName').textContent = `Payment Required: ${itemName}`;
   const paymentElement = document.getElementById('paymentText');
-  paymentElement.innerHTML = `<p><strong>To receive your ${isSecret ? 'secret item' : 'order'}, you must upload the following text publicly:</strong></p>
+  paymentElement.innerHTML = `<p><strong>To receive your ${isSecret?'secret item':'order'}, upload the following text publicly:</strong></p>
     <p>"${paymentText}"</p>
-    <p><strong>Tag @DommyMommyCafe and include #${isSecret ? 'SecretMenuPayment' : 'StoryPayment'}</strong></p>`;
-  document.getElementById('paymentModal').style.display = 'flex';
+    <p><strong>Tag @DommyMommyCafe and include #${isSecret?'SecretMenuPayment':'StoryPayment'}</strong></p>`;
+  document.getElementById('paymentModal').style.display='flex';
 }
-
-function closePaymentModal() {
-  document.getElementById('paymentModal').style.display = 'none';
-  alert("Thank you for your payment. Your order is being prepared!");
-}
+function closePaymentModal(){document.getElementById('paymentModal').style.display='none';alert("Thank you, your order is being prepared!");}
 
 // Password modal
 const modal=document.getElementById('passwordModal'),
@@ -178,11 +193,10 @@ const modal=document.getElementById('passwordModal'),
       error=document.getElementById('passwordError');
 
 function toggleModal(show){
-  modal.style.display = show ? 'flex' : 'none';
-  input.value = '';
-  error.style.display = 'none';
+  modal.style.display = show?'flex':'none';
+  input.value='';
+  error.style.display='none';
 }
-
 function checkPassword(){
   if(input.value==='mommyy'){
     toggleModal(false);
@@ -193,12 +207,9 @@ function checkPassword(){
     input.value='';
   }
 }
-
-modal.addEventListener('click', e => { if(e.target===modal) toggleModal(false) });
-document.getElementById('paymentModal').addEventListener('click', e => { 
-  if(e.target === document.getElementById('paymentModal')) closePaymentModal() 
-});
-input.addEventListener('keypress', e => { if(e.key==='Enter') checkPassword() });
+modal.addEventListener('click',e=>{if(e.target===modal) toggleModal(false)});
+document.getElementById('paymentModal').addEventListener('click',e=>{if(e.target===document.getElementById('paymentModal')) closePaymentModal()});
+input.addEventListener('keypress',e=>{if(e.key==='Enter') checkPassword()});
 
 loadMenu();
 </script>
