@@ -1,68 +1,122 @@
-<script>
-const coffee = [
-  {n:"Classic Espresso", d:"I visited Dommy Mommy Café and knelt nervously as the barista prepared my Classic Espresso. The strong aroma commanded my attention, and I felt entirely at their mercy, powerless yet eager to obey every instruction before tasting the bold sip."},
-  {n:"Creamy Cappuccino", d:"With the Creamy Cappuccino in front of me, I hesitated, knowing I had to savor each velvety swirl like a good little submissive. The warm cup pressed into my hands reminded me how small and obedient I truly was here."},
-  {n:"Caramel Macchiato", d:"The Caramel Macchiato arrived, sweet and inviting, and I couldn’t help but whisper my gratitude, feeling helplessly obedient to the gentle dominance of the café’s attention."},
-  {n:"Mocha Dream", d:"Sitting with the Mocha Dream before me, I let myself fully submit to the experience, enchanted by the barista’s watchful eyes and feeling utterly spoiled by their control over my indulgence."}
-];
-
-const tea = [
-  {n:"English Breakfast", d:"I timidly accepted my English Breakfast tea, aware of how little control I had in this place. Every sip reminded me to be a good submissive and follow the quiet rules of Dommy Mommy Café."},
-  {n:"Green Tea Sensation", d:"The Green Tea Sensation was served with a knowing glance, and I felt myself relax into obedience, listening to every whispered instruction as I nervously savored the warm cup."},
-  {n:"Chamomile Bliss", d:"Chamomile Bliss wrapped me in its gentle heat, but it was the soft gaze of the barista that truly made me feel the delicious tension of submission, reminding me who was really in charge here."},
-  {n:"Chai Latte", d:"I held the Chai Latte with trembling hands, surrendering to the warm spice and the subtle authority of the café, feeling both comforted and completely obedient."}
-];
-
-const desserts = [
-  {n:"Croissant", d:"I reached for the Croissant slowly, knowing I had to wait for permission to enjoy it. Each bite reminded me how much I relished being a submissive here, following the café’s gentle guidance."},
-  {n:"Blueberry Muffin", d:"The Blueberry Muffin was offered with a teasing smile, and I obeyed every subtle instruction, delighting in how completely this café had me under its playful control."},
-  {n:"Chocolate Brownie", d:"I nibbled the Chocolate Brownie with quiet reverence, savoring the way being watched amplified every sensation, feeling deliciously obedient under the café’s influence."},
-  {n:"New York Cheesecake", d:"The New York Cheesecake was laid before me, and I lowered my gaze, knowing that enjoying it fully required my complete submission to the atmosphere, the baristas, and the rules of this charming place."}
-];
-
-const secretMenu = [
-  {n:"Reverse Headscissor Chokehold", d:"I felt the power of the Reverse Headscissor Chokehold as I knelt, completely unable to resist, every nerve alert, knowing my obedience was tested and demanded."},
-  {n:"Thigh Choke Submission", d:"The Thigh Choke Submission made me shiver with helplessness, teaching me how small I truly was under the careful control of the café’s influence."},
-  {n:"Suffocating Bosom Press", d:"The Suffocating Bosom Press reminded me that submission can be comforting yet commanding, as I melted under gentle but firm guidance."},
-  {n:"Hand Gag Control", d:"I was silently obedient, hands restrained and under the playful domination of the café, every movement guided with careful precision."},
-  {n:"Kiss Gag Ritual", d:"The Kiss Gag Ritual left me flushed and submissive, my mouth powerless to resist the teasing commands and attention surrounding me."},
-  {n:"Triangle Choke Domination", d:"The Triangle Choke Domination held me completely still, and I felt a delicious surrender in every controlled moment."},
-  {n:"Pussy Grinding", d:"I obediently followed every subtle command as I pressed close, feeling each controlled motion heighten my submission."},
-  {n:"Facesitting", d:"I knelt and obeyed, letting the dominant presence envelop me, each moment a lesson in playful surrender."},
-  {n:"Front Face Grinding", d:"Each gentle grind reminded me how entirely I belonged to the café’s rhythm, obedient and attentive to every touch."},
-  {n:"Pegging / Strapon Control", d:"I experienced the Pegging control and found myself fully submissive, surrendering to the playful authority with every careful motion."},
-  {n:"Impact Play", d:"Every pat and gentle strike left me shivering, enjoying the precise control and my own willingness to obey."},
-  {n:"CBT Mastery", d:"The CBT Mastery tested my endurance and obedience, and I submitted completely to the playful yet strict guidance."},
-  {n:"Needle Play", d:"I surrendered to the precise care of Needle Play, feeling both tension and excitement under controlled supervision."},
-  {n:"Tickle Torment", d:"Tickle Torment left me helpless and giggling, knowing that my inability to resist was exactly what was desired."},
-  {n:"Candle Tease", d:"The gentle heat of Candle Tease left me obediently shivering, fully submitting to each careful touch."},
-  {n:"Forced Face Cumming", d:"I followed every command, feeling my helplessness intensify as the experience tested my limits under playful domination."},
-  {n:"Cum Drinking Ritual", d:"Completely obedient, I participated fully in the ritual, every moment reminding me of my small, submissive place."},
-  {n:"Golden Shower Elixir", d:"I knelt with reverence, accepting the Golden Shower Elixir, feeling both shy and devoted in my obedience."},
-  {n:"Scatological Devotion", d:"My full attention was demanded, and I obeyed without hesitation, reveling in the playful submission required."},
-  {n:"Saliva Submission", d:"Every drop reminded me that my role was to obey, to follow, and to surrender fully to the café’s control."},
-  {n:"Figure 4 Headscissor", d:"The Figure 4 Headscissor brought me to my knees, utterly powerless, and I reveled in the delicious restraint of total submission."},
-  {n:"North-South Smother", d:"I melted under the North-South Smother, knowing every movement was watched and my obedience complete."},
-  {n:"Feet Worship", d:"I obeyed the command to honor and worship, kneeling and attending every detail, delighting in my role."},
-  {n:"Feet Gagging", d:"I submitted completely, gagged and attentive, following the playful control of the café to every letter."},
-  {n:"Forced Exhibitionism", d:"I was placed on display, shy but obedient, every glance reminding me who was really in charge."},
-  {n:"Roleplay Immersion", d:"Fully immersed in the café’s playful world, I obeyed each scene, learning the delicious tension of perfect submission."}
-];
-
-// Function to fill items
-function fillItems(container, items){
-  const c = document.getElementById(container);
-  items.forEach(i => {
-    c.innerHTML += `<div class="menu-item">
-      <div class="item-name">${i.n}</div>
-      <p class="item-desc">${i.d}</p>
-    </div>`;
-  });
+{
+  "coffee": [
+    {
+      "n": "Classic Espresso",
+      "d": "I visited Dommy Mommy Café as a shy little sub, and the intensity of the espresso left me trembling. I couldn’t help but admire how every shot was served with such precise control, making me feel delightfully obedient."
+    },
+    {
+      "n": "Creamy Cappuccino",
+      "d": "The cappuccino wrapped me in a soft, warm embrace. I felt small and devoted as the frothy milk softened the bold espresso, reminding me that sometimes submission means enjoying the gentle touch before facing stronger pleasures."
+    },
+    {
+      "n": "Caramel Macchiato",
+      "d": "With each sip of the caramel macchiato, I felt a sweet, teasing dominance over my senses. I was aware of my own weakness, quietly submitting to the luxurious flavors, craving every little indulgence served with care."
+    },
+    {
+      "n": "Mocha Dream",
+      "d": "I felt so small before the mocha dream, the chocolate and espresso combining in a way that left me completely under the café's spell. Every sip reminded me that surrendering to delight is part of my subby journey."
+    }
+  ],
+  "tea": [
+    {
+      "n": "English Breakfast",
+      "d": "The strong, commanding aroma of the English Breakfast tea had me feeling like a devoted little sub, eager to follow every note and nuance as if I were learning to obey the rules of flavor."
+    },
+    {
+      "n": "Green Tea Sensation",
+      "d": "Light and refreshing, the green tea sensation made me feel delicate and attentive, like a sub carefully following instructions, appreciating the subtleties in every steeped leaf."
+    },
+    {
+      "n": "Chamomile Bliss",
+      "d": "Chamomile Bliss wrapped me in gentle control, calming my fluttering nerves. I felt comforted and small, surrendering to the soothing experience like a sub being pampered under watchful eyes."
+    },
+    {
+      "n": "Chai Latte",
+      "d": "The warm spices of the chai latte teased me into obedience, each sip a reminder of the playful dominance the café holds over my senses. I was happily under its control, a little sub enjoying every flavorful command."
+    }
+  ],
+  "desserts": [
+    {
+      "n": "Croissant",
+      "d": "Flaky and buttery, the croissant made me realize how sweet surrender could be. I felt so small before its perfection, happily yielding to the gentle authority of the café’s hands."
+    },
+    {
+      "n": "Blueberry Muffin",
+      "d": "The blueberry muffin was a treat that made me feel obedient and eager. Each bite reminded me that submission can be deliciously rewarding when served with care and attention."
+    },
+    {
+      "n": "Chocolate Brownie",
+      "d": "Rich and decadent, the chocolate brownie was a test of my devotion. I surrendered fully to the indulgence, aware of my subby nature and enjoying the controlled pleasure it offered."
+    },
+    {
+      "n": "New York Cheesecake",
+      "d": "The creamy cheesecake had me feeling small and devoted, each forkful a gentle reminder that being a submissive sometimes means enjoying every detail, no matter how overwhelming it seems."
+    }
+  ],
+  "secret": [
+    {
+      "n": "Thigh Scissor Supreme",
+      "d": "Experience the ultimate headscissor domination, leaving me trembling in delightful submission."
+    },
+    {
+      "n": "Bosom Control",
+      "d": "Complete boob smothering experience, perfectly crafted for a sub eager to submit."
+    },
+    {
+      "n": "Hand Gag Session",
+      "d": "A firm hand gag that reminds me of my small and obedient place."
+    },
+    {
+      "n": "Kiss & Gag",
+      "d": "Breathplay combined with teasing kisses for a fully submissive experience."
+    },
+    {
+      "n": "Sole Submission",
+      "d": "Feet worship designed to make me obedient and attentive to every command."
+    },
+    {
+      "n": "Feet Gagging",
+      "d": "Submission through foot-based control, leaving me small and compliant."
+    },
+    {
+      "n": "Queen's Throne",
+      "d": "Full facesitting experience with optional control, making me fully subby."
+    },
+    {
+      "n": "Anal Dominance (Strap-On)",
+      "d": "A pegging session that leaves me utterly under control, embracing my submissive side."
+    },
+    {
+      "n": "Total Bondage",
+      "d": "Complete restraint experience, teaching me to accept my helplessness with obedience."
+    },
+    {
+      "n": "Human Furniture",
+      "d": "Becoming functional furniture for a Domme’s relaxation, fully submitting to every command."
+    },
+    {
+      "n": "Sensory Deprivation",
+      "d": "Blindfolds, gags, and restraint combine to heighten my awareness of being a sub."
+    },
+    {
+      "n": "Financial Domination",
+      "d": "Monetary submission through tribute and gift giving, embracing my obedient nature."
+    },
+    {
+      "n": "Figure 4 Headscissor",
+      "d": "Experience the powerful figure 4 scissor, making me submit completely."
+    },
+    {
+      "n": "Pussy Grinding",
+      "d": "Front-facing grinding that makes me ache with subby anticipation."
+    },
+    {
+      "n": "Facesitting",
+      "d": "Full facesitting experience emphasizing my small, obedient role."
+    },
+    {
+      "n": "Blood Ritual",
+      "d": "Submission intensified with the unique ritual, leaving me completely devoted."
+    }
+  ]
 }
-
-// Fill menu items
-fillItems('coffeeItems', coffee);
-fillItems('teaItems', tea);
-fillItems('dessertItems', desserts);
-fillItems('secretItems', secretMenu);
-</script>
