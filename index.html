@@ -42,7 +42,7 @@ body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,
 .secret-title{font-size:2rem;color:var(--accent1);margin-bottom:25px;text-align:center;display:flex;align-items:center;justify-content:center;gap:15px}
 .secret-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:25px}
 .footer{text-align:center;margin-top:30px;color:var(--accent3);font-size:.9rem}
-.warning{color:var(--accent1);font-size:0.9rem;margin-top:15px;font-style:italic}
+.warning{color:var(--accent1);font-size:.9rem;margin-top:15px;font-style:italic}
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:768px){.menu{padding:25px}.menu-title{font-size:2.5rem}.menu-items,.secret-grid{grid-template-columns:1fr}}
 .secret-category-title{font-size:1.5rem;color:#ff7ec8;margin:30px 0 15px;padding-bottom:10px;border-bottom:2px solid #a64d79;text-align:center}
@@ -91,7 +91,6 @@ body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,
 
         <h3 class="secret-category-title">💥 Pain / Impact</h3>
         <div class="secret-grid" id="painItems"></div>
-
       </div>
     </div>
   </div>
@@ -131,23 +130,23 @@ const fallbackMainData = {
 };
 
 const fallbackSecretData = {
-  fluid:[{name:"Secret Fluid 1",desc:"...",payment:"Payment"}],
-  worship:[{name:"Secret Worship 1",desc:"...",payment:"Payment"}],
-  forced:[{name:"Secret Forced 1",desc:"...",payment:"Payment"}],
-  roleplay:[{name:"Secret Roleplay 1",desc:"...",payment:"Payment"}],
-  pain:[{name:"Secret Pain 1",desc:"...",payment:"Payment"}]
+  fluid:[{name:"Secret Fluid 1",desc:"...Description...",payment:"Secret Fluid Payment"}],
+  worship:[{name:"Secret Worship 1",desc:"...Description...",payment:"Secret Worship Payment"}],
+  forced:[{name:"Secret Forced 1",desc:"...Description...",payment:"Secret Forced Payment"}],
+  roleplay:[{name:"Secret Roleplay 1",desc:"...Description...",payment:"Secret Roleplay Payment"}],
+  pain:[{name:"Secret Pain 1",desc:"...Description...",payment:"Secret Pain Payment"}]
 };
 
 async function loadMenu() {
   let mainData = fallbackMainData;
   let secretData = fallbackSecretData;
 
-  try{
+  try {
     const resMain = await fetch(mainJSONURL);
     if(resMain.ok) mainData = await resMain.json();
   } catch(e){ console.warn("Main JSON failed, using fallback") }
 
-  try{
+  try {
     const resSecret = await fetch(secretJSONURL);
     if(resSecret.ok) secretData = await resSecret.json();
   } catch(e){ console.warn("Secret JSON failed, using fallback") }
@@ -158,7 +157,7 @@ async function loadMenu() {
     items.forEach(i=>{
       const item = document.createElement('div');
       item.className = isSecret ? 'secret-item' : 'menu-item';
-      item.innerHTML = `
+item.innerHTML = `
         <div class="item-name">${i.name}</div>
         <p class="${isSecret?'secret-item-desc':'item-desc'}">${i.desc}</p>
         <div class="${isSecret?'post-indicator':'story-indicator'}"><i class="fas ${isSecret?'fa-comment':'fa-book'}"></i> Click to view payment requirements</div>
@@ -168,4 +167,62 @@ async function loadMenu() {
     });
   }
 
-  //
+  // Fill main menu
+  fillItems('coffeeItems',mainData.coffee);
+  fillItems('teaItems',mainData.tea);
+  fillItems('dessertItems',mainData.desserts);
+
+  // Fill secret menu
+  fillItems('fluidItems',secretData.fluid,true);
+  fillItems('worshipItems',secretData.worship,true);
+  fillItems('forcedItems',secretData.forced,true);
+  fillItems('roleplayItems',secretData.roleplay,true);
+  fillItems('painItems',secretData.pain,true);
+}
+
+// Payment modal functions
+function openPaymentModal(itemName,paymentText,isSecret=false){
+  document.getElementById('paymentItemName').textContent = `Payment Required: ${itemName}`;
+  const paymentElement = document.getElementById('paymentText');
+  paymentElement.innerHTML = `<p><strong>To receive your ${isSecret?'secret item':'order'}, upload the following text publicly:</strong></p>
+    <p>"${paymentText}"</p>
+    <p><strong>Tag @DommyMommyCafe and include #${isSecret?'SecretMenuPayment':'StoryPayment'}</strong></p>`;
+  document.getElementById('paymentModal').style.display='flex';
+}
+
+function closePaymentModal(){
+  document.getElementById('paymentModal').style.display='none';
+  alert("Thank you, your order is being prepared!");
+}
+
+// Password modal
+const modal=document.getElementById('passwordModal'),
+      menu=document.getElementById('secretMenu'),
+      input=document.getElementById('passwordInput'),
+      error=document.getElementById('passwordError');
+
+function toggleModal(show){
+  modal.style.display = show?'flex':'none';
+  input.value='';
+  error.style.display='none';
+}
+
+function checkPassword(){
+  if(input.value==='mommyy'){
+    toggleModal(false);
+    menu.style.display='block';
+    document.getElementById('btnText').textContent='Hide Secret Menu';
+  } else {
+    error.style.display='block';
+    input.value='';
+  }
+}
+
+modal.addEventListener('click',e=>{if(e.target===modal) toggleModal(false)});
+document.getElementById('paymentModal').addEventListener('click',e=>{if(e.target===document.getElementById('paymentModal')) closePaymentModal()});
+input.addEventListener('keypress',e=>{if(e.key==='Enter') checkPassword()});
+
+loadMenu();
+</script>
+</body>
+</html>
